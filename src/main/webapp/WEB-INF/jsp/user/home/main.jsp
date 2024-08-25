@@ -7,6 +7,8 @@
 <title>Main</title>
 </head>
 <body>
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo id minus placeat eos voluptatum nisi praesentium rem nihil culpa cumque atque sunt sed consequatur nostrum repellendus est tempore quia saepe.
+	
+	<h2><a href="main">MAIN</a></h2>
+	<h2><a href="../article/list">LIST</a></h2>
 </body>
 </html>

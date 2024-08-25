@@ -7,5 +7,4 @@
 <body>
 	
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium sapiente voluptatem tenetur distinctio tempore doloremque animi omnis officiis culpa cum laudantium quidem tempora dolorem molestiae dolore pariatur soluta doloribus quis?
-</body>
-</html>
+<%@ include file="../common/foot.jspf"%>

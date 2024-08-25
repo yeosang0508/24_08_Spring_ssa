@@ -25,5 +25,4 @@
 		</tbody>
 	</table>
 </div>
-</body>
-</html>
+<%@ include file="../common/foot.jspf"%>

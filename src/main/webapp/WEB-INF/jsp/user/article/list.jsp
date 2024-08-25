@@ -1,37 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<c:set var="pageTitle" value="${board.code } LIST"></c:set>
+<%@ include file="../common/head.jspf"%>
 
+<hr />
 
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>LIST</title>
-</head>
-<body>
-	<h2>게시글 목록</h2>
+<table>
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Registration Date</th>
+			<th>TITLE</th>
 
-	<hr />
-
-	<table>
-		<thead>
+		</tr>
+	</thead>
+	<tbody>
+		<c:forEach var="article" items="${articles}">
 			<tr>
-				<th>ID</th>
-				<th>Registration Date</th>
-				<th>TITLE</th>
+				<td>${article.id }</td>
+				<td>${article.regDate.substring(0,10)}</td>
+				<td>${article.title }</td>
 
 			</tr>
-		</thead>
-		<tbody>
-			<c:forEach var="article" items="${articles}">
-				<tr>
-					<td>${article.id }</td>
-					<td>${article.regDate.substring(0,10)}</td>
-					<td>${article.title }</td>
-
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+		</c:forEach>
+	</tbody>
+</table>
 </body>
 </html>

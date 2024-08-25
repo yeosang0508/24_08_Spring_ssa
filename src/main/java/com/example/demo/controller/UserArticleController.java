@@ -18,6 +18,16 @@ public class UserArticleController {
 	@Autowired
 	ArticleService articleService;
 	
+	
+	@RequestMapping("/user/article/detail")
+	public String showDetail(Model model, int id) {
+		Article article = articleService.getArticleById(id);
+		
+		model.addAttribute("article", article);
+		
+		return "/user/article/detail";
+		
+	}
 
 	
 	@RequestMapping("/user/article/list")

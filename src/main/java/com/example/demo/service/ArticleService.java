@@ -26,4 +26,9 @@ public class ArticleService {
 		return articleRepository.getArticles();
 	}
 
+	public Article getArticleById(int id) {
+		
+		return articleRepository.getArticleById(id);
+	}
+
 }

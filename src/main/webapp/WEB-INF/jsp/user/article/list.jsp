@@ -5,25 +5,25 @@
 
 <hr />
 
-<table>
-	<thead>
-		<tr>
-			<th>ID</th>
-			<th>Registration Date</th>
-			<th>TITLE</th>
-
-		</tr>
-	</thead>
-	<tbody>
-		<c:forEach var="article" items="${articles}">
+<div class="overflow-x-auto">
+	<table class="min-w-full bg-white shadow-md rounded-lg border border-gray-200">
+		<thead class="bg-blue-300 ">
 			<tr>
-				<td>${article.id }</td>
-				<td>${article.regDate.substring(0,10)}</td>
-				<td>${article.title }</td>
-
+				<th class="py-3 px-6 text-left">ID</th>
+				<th class="py-3 px-6 text-left">Registration Date</th>
+				<th class="py-3 px-6 text-left">TITLE</th>
 			</tr>
-		</c:forEach>
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			<c:forEach var="article" items="${articles}">
+				<tr class="border-b border-gray-200 hover:bg-gray-100">
+					<td class="py-3 px-6 text-sm text-gray-800">${article.id}</td>
+					<td class="py-3 px-6 text-sm text-gray-600">${article.regDate.substring(0,10)}</td>
+					<td class="py-3 px-6 text-sm text-gray-800"><a href="detail?id=${article.id}">${article.title}</a></td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+</div>
 </body>
 </html>
